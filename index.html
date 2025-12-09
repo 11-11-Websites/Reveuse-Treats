@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Reveuse Treats Bakery</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Arial', sans-serif;
+      line-height: 1.6;
+      color: #2b2140;
+      background: #ffffff;
+    }
+
+    .logo-wrapper {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      margin-top: 1.25rem;
+      padding: 0 1rem;
+    }
+
+    .logo-circle {
+      width: 8.75rem;
+      height: 8.75rem;
+      border-radius: 50%;
+      background: radial-gradient(circle, #ffffff 0%, #c29bff 80%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 10px 25px rgba(96, 61, 155, 0.3);
+      border: 3px solid rgba(255, 255, 255, 0.8);
+      overflow: hidden;
+    }
+
+    .logo-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .brand-name {
+      text-align: center;
+      margin-top: 0.75rem;
+      font-size: clamp(1.4rem, 2vw, 1.8rem);
+      font-weight: 800;
+      letter-spacing: 0.08em;
+      color: #3b1f6b;
+      text-transform: uppercase;
+      font-family: 'Trebuchet MS', 'Segoe UI', sans-serif;
+      padding: 0 1rem;
+    }
+
+    nav {
+      background: rgba(128, 0, 255, 0.25);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+      padding: 0.5rem 1.25rem;
+      margin-top: 0.9rem;
+      border-radius: 30px;
+      max-width: 68.75rem;
+      margin-left: auto;
+      margin-right: auto;
+      box-shadow: 0 10px 30px rgba(80, 0, 160, 0.4);
+      border: 1px solid rgba(255, 255, 255, 0.6);
+
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+    }
+
+    .nav-left-icons {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      flex-wrap: wrap;
+    }
+
+    .nav-left-icons a {
+      text-decoration: none;
+      padding: 0.25rem 0.5rem;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.3);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.8rem;
+      transition: background 0.2s, transform 0.2s;
+    }
+
+    .nav-left-icons a:hover {
+      background: rgba(255, 255, 255, 0.6);
+      transform: translateY(-1px);
+    }
+
+    .nav-icon {
+      width: 22px;
+      height: 22px;
+      object-fit: contain;
+      display: block;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: flex-end;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
+    nav ul a {
+      color: #000000;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 0.85rem;
+      padding: 0.35rem 0.9rem;
+      border-radius: 999px;
+      transition: background 0.2s, color 0.2s;
+      white-space: nowrap;
+    }
+
+    nav ul a:hover {
+      background: rgba(255, 255, 255, 0.2);
+      color: #ffffff;
+    }
+
+    .hero {
+      min-height: 60vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: #2b2140;
+      padding: 0 1.5rem 1.5rem;
+    }
+
+    .hero-inner { max-width: 43.75rem; }
+
+    .hero h1 {
+      font-size: clamp(2rem, 5vw, 3rem);
+      margin-bottom: 0.75rem;
+    }
+
+    .hero p {
+      font-size: clamp(0.95rem, 2vw, 1.1rem);
+      opacity: 0.9;
+    }
+
+    .header-hero-wrapper {
+      background-image: url('images/Bakery BG.jpeg');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-attachment: fixed; /* optional */
+      min-height: 100vh;
+      position: relative;
+      padding-bottom: 2rem;
+    }
+
+    .header-hero-wrapper::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: rgba(255, 255, 255, 0.4); /* overlay for readability */
+      backdrop-filter: blur(2px);
+      z-index: 1;
+    }
+
+    .logo-wrapper,
+    .brand-name,
+    nav,
+    .hero {
+      position: relative;
+      z-index: 2;
+    }
+
+    .section {
+      padding: 3rem 1.5rem;
+      max-width: 75rem;
+      margin: auto;
+    }
+
+    .section h2 {
+      text-align: center;
+      margin-bottom: 1.75rem;
+      color: #3b1f6b;
+      font-size: clamp(1.5rem, 3vw, 2rem);
+    }
+
+    .filter-btns {
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+
+    .filter-btn {
+      background: rgba(255, 255, 255, 0.6);
+      border: 1px solid rgba(138, 81, 255, 0.4);
+      padding: 0.5rem 1.1rem;
+      margin: 0.25rem 0.35rem;
+      border-radius: 999px;
+      cursor: pointer;
+      color: #3b1f6b;
+      font-weight: 500;
+      font-size: 0.9rem;
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      transition: background 0.2s, color 0.2s, transform 0.2s;
+    }
+
+    .filter-btn.active,
+    .filter-btn:hover {
+      background: linear-gradient(135deg, #8a51ff, #d08dff);
+      color: #ffffff;
+      transform: translateY(-1px);
+    }
+
+    .products {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+      gap: 1.75rem;
+    }
+
+    .product {
+      position: relative;
+      background: rgba(128, 0, 255, 0.22);
+      border-radius: 18px;
+      overflow: hidden;
+      box-shadow: 0 18px 40px rgba(70, 0, 140, 0.45);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border: 1px solid rgba(255, 255, 255, 0.55);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .product::before {
+      content: "";
+      position: absolute;
+      top: -30%;
+      right: -30%;
+      width: 60%;
+      height: 60%;
+      background: radial-gradient(circle at top right, rgba(255, 255, 255, 0.7), transparent 60%);
+      opacity: 0.55;
+      pointer-events: none;
+    }
+
+    .product:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 26px 60px rgba(42, 9, 92, 0.6);
+    }
+
+    .product img {
+      width: 100%;
+      height: 190px;
+      object-fit: cover;
+      opacity: 0.95;
+      display: block;
+    }
+
+    .product-info {
+      padding: 0.9rem 1rem 1.2rem;
+      text-align: center;
+      color: #000000;
+    }
+
+    .product-info h3 {
+      margin-bottom: 0.35rem;
+      font-size: 1rem;
+    }
+
+    .price {
+      font-size: 1.1rem;
+      font-weight: bold;
+      color: #000000;
+      margin-bottom: 0.5rem;
+    }
+
+    .buy-btn {
+      display: inline-block;
+      margin-top: 0.2rem;
+      padding: 0.45rem 1.2rem;
+      border-radius: 999px;
+      border: none;
+      cursor: pointer;
+      font-weight: 600;
+      font-size: 0.9rem;
+      background: #ffffff;
+      color: #6e37d6;
+      box-shadow: 0 8px 18px rgba(42, 9, 92, 0.45);
+      transition: transform 0.2s, box-shadow 0.2s, background 0.2s, color 0.2s;
+    }
+
+    .buy-btn:hover {
+      transform: translateY(-2px);
+      background: linear-gradient(135deg, #8a51ff, #d08dff);
+      color: #ffffff;
+      box-shadow: 0 12px 26px rgba(42, 9, 92, 0.7);
+    }
+
+    #about {
+      background: rgba(128, 0, 255, 0.12);
+      border-radius: 20px;
+      box-shadow: 0 15px 30px rgba(70, 0, 140, 0.3);
+      backdrop-filter: blur(18px);
+      -webkit-backdrop-filter: blur(18px);
+      border: 1px solid rgba(255, 255, 255, 0.6);
+    }
+
+    #about p {
+      text-align: center;
+      max-width: 50rem;
+      margin: auto;
+      color: #442060;
+      font-size: 0.95rem;
+      padding: 0 0.5rem 1rem;
+    }
+
+    form {
+      max-width: 31.25rem;
+      margin: auto;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    input, textarea, button {
+      padding: 0.75rem;
+      border: 1px solid rgba(150, 110, 220, 0.5);
+      border-radius: 10px;
+      font-family: inherit;
+      font-size: 0.95rem;
+    }
+
+    input, textarea {
+      background: rgba(255, 255, 255, 0.9);
+      width: 100%;
+    }
+
+    textarea {
+      resize: vertical;
+      min-height: 120px;
+    }
+
+    button[type="submit"] {
+      background: linear-gradient(135deg, #8a51ff, #d08dff);
+      color: white;
+      border: none;
+      cursor: pointer;
+      font-weight: bold;
+      box-shadow: 0 10px 25px rgba(94, 49, 170, 0.5);
+    }
+
+    footer {
+      background: rgba(30, 15, 60, 0.95);
+      color: white;
+      text-align: center;
+      padding: 1rem;
+      margin-top: 3rem;
+      font-size: 0.85rem;
+    }
+
+    @media (max-width: 768px) {
+      nav {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.75rem;
+      }
+
+      nav ul {
+        justify-content: center;
+        width: 100%;
+      }
+
+      .hero {
+        padding-top: 1.5rem;
+        min-height: 55vh;
+      }
+
+      .products {
+        grid-template-columns: 1fr;
+      }
+
+      .header-hero-wrapper {
+        background-attachment: scroll;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .logo-circle {
+        width: 7.5rem;
+        height: 7.5rem;
+      }
+
+      nav {
+        padding-inline: 1rem;
+      }
+
+      .section {
+        padding-inline: 1.1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- wrapper with background image -->
+  <div class="header-hero-wrapper">
+    <div class="logo-wrapper">
+      <div class="logo-circle">
+        <img src="C:\Users\jagath lal\Downloads\LOGO edited_page-0001.jpg" alt="Reveuse Treats Logo" class="logo-img">
+      </div>
+    </div>
+
+    <div class="brand-name">
+      Reveuse Treats
+    </div>
+
+    <nav>
+      <div class="nav-left-icons">
+        <a href="tel:919498024662" title="Call">
+          📞 Call
+        </a>
+        <a href="https://wa.me/919498024662" target="_blank" title="WhatsApp">
+          💬 Chat
+        </a>
+        <a href="https://www.google.com/maps/search/?api=1&query=Reveuse+Treats+Bakery"
+           target="_blank" title="Location">
+          📍 Location
+        </a>
+      </div>
+
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#menu">Menu</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+
+    <section id="home" class="hero">
+      <div class="hero-inner">
+        <h1>Fresh, Fluffy & Fabulous.</h1>
+        <p><b>Hand-crafted Cakes,Cookies and Brownies baked every morning in the heart of your city.</b></p>
+      </div>
+    </section>
+  </div>
+
+  <section id="menu" class="section">
+    <h2>Our Delights</h2>
+    <div class="filter-btns">
+      <button class="filter-btn active" data-category="all">All</button>
+      <button class="filter-btn" data-category="cake">Cakes</button>
+      <button class="filter-btn" data-category="bread">Breads</button>
+      <button class="filter-btn" data-category="gluten-free">Gluten-Free</button>
+    </div>
+
+    <div class="products">
+      <div class="product" data-category="cake">
+        <img src="https://via.placeholder.com/250x200/FFB6C1/8B008B?text=Chocolate+Cake" alt="Chocolate Cake">
+        <div class="product-info">
+          <h3 class="item-name">Chocolate Dream Cake</h3>
+          <p class="price" data-price="25">$25</p>
+          <button class="buy-btn">Buy Now</button>
+        </div>
+      </div>
+
+      <div class="product" data-category="bread">
+        <img src="https://via.placeholder.com/250x200/D8BFD8/4B0082?text=Fresh+Bread" alt="Fresh Bread">
+        <div class="product-info">
+          <h3 class="item-name">Artisan Sourdough</h3>
+          <p class="price" data-price="5">$5</p>
+          <button class="buy-btn">Buy Now</button>
+        </div>
+      </div>
+
+      <div class="product" data-category="gluten-free">
+        <img src="https://via.placeholder.com/250x200/E6E6FA/800080?text=GF+Muffin" alt="Gluten-Free Muffin">
+        <div class="product-info">
+          <h3 class="item-name">Gluten-Free Berry Muffin</h3>
+          <p class="price" data-price="4">$4</p>
+          <button class="buy-btn">Buy Now</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="about" class="section">
+    <h2>About Us</h2>
+    <p>Reveuse Treats is a family bakery known for small-batch recipes, real ingredients, and a passion for beautiful bakes.</p>
+  </section>
+
+  <section id="contact" class="section">
+    <h2>Get in Touch</h2>
+    <form id="contact-form">
+      <textarea id="contact-message" placeholder="Message" rows="5" required></textarea>
+      <button type="submit">Send</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Reveuse Treats Bakery. All rights reserved.</p>
+  </footer>
+
+  <script>
+    // FILTER BUTTONS
+    const filterBtns = document.querySelectorAll('.filter-btn');
+    const products = document.querySelectorAll('.product');
+
+    filterBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        filterBtns.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        const category = btn.dataset.category;
+
+        products.forEach(product => {
+          if (category === 'all' || product.dataset.category === category) {
+            product.style.display = 'block';
+          } else {
+            product.style.display = 'none';
+          }
+        });
+      });
+    });
+
+    // CONTACT FORM → WHATSAPP
+    const CONTACT_WHATSAPP = "919498024662";
+
+    document.getElementById('contact-form').addEventListener('submit', (e) => {
+      e.preventDefault();
+      const message = document.getElementById('contact-message').value.trim();
+
+      const fullMessage =
+        `Greetings Reveuse Treats:\n` +
+        `Message: ${message}`;
+
+      const encoded = encodeURIComponent(fullMessage);
+      const waUrl = `https://wa.me/${CONTACT_WHATSAPP}?text=${encoded}`;
+      window.open(waUrl, "_blank");
+    });
+
+    // SMOOTH SCROLL
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', (e) => {
+        e.preventDefault();
+        document.querySelector(anchor.getAttribute('href'))
+          .scrollIntoView({ behavior: 'smooth' });
+      });
+    });
+
+    // WHATSAPP BUY NOW (products)
+    function openWhatsApp(itemName, price) {
+      const message = `Greetings Reveuse Treats, I would like to order: ${itemName} (Price: $${price}).`;
+      const encodedMessage = encodeURIComponent(message);
+      const url = `https://wa.me/${CONTACT_WHATSAPP}?text=${encodedMessage}`;
+      window.open(url, "_blank");
+    }
+
+    document.querySelectorAll('.buy-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const card = btn.closest('.product');
+        const name = card.querySelector('.item-name').textContent.trim();
+        const price = card.querySelector('.price').getAttribute('data-price');
+        openWhatsApp(name, price);
+      });
+    });
+  </script>
+</body>
+</html>
