@@ -83,6 +83,7 @@
       align-items: center;
       gap: 0.5rem;
       flex-wrap: wrap;
+      max-width: 100%;
     }
 
     .nav-left-icons a {
@@ -232,6 +233,7 @@
       -webkit-backdrop-filter: blur(16px);
       border: 1px solid rgba(255, 255, 255, 0.5);
       transition: transform 0.22s ease, box-shadow 0.22s ease;
+      display: block; /* ensure visible */
     }
 
     .product::before {
@@ -424,10 +426,9 @@
       <div class="nav-left-icons">
         <a href="tel:919498024662" title="Call">📞 Call</a>
         <a href="https://wa.me/919498024662" target="_blank" title="WhatsApp">💬 Chat</a>
-        <!-- New Mail option -->
         <a href="mailto:reveusetreats@gmail.com" title="Mail">✉️ Mail</a>
         <a href="https://www.google.com/maps/search/?api=1&query=Reveuse+Treats+Bakery"
-           target="_blank" title="Location">📍 Loc</a>
+           target="_blank" title="Location">📍 Location</a>
       </div>
 
       <ul>
@@ -455,8 +456,16 @@
     </div>
 
     <div class="products">
-      <!-- your product cards (unchanged) -->
-      <!-- ... -->
+      <div class="product" data-category="half-kg">
+        <img src="https://via.placeholder.com/250x200/FFF5E1/8B4513?text=Vanilla" alt="Half KG Vanilla Cake">
+        <div class="product-info">
+          <h3 class="item-name">Half KG Vanilla Cake</h3>
+          <p class="price" data-price="350">₹350</p>
+          <button class="buy-btn">Buy Now</button>
+        </div>
+      </div>
+
+      <!-- repeat other .product cards as in your previous version -->
     </div>
   </section>
 
@@ -543,5 +552,3 @@
   </script>
 </body>
 </html>
-
-
