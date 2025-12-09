@@ -36,13 +36,15 @@
       justify-content: center;
       box-shadow: 0 10px 25px rgba(96, 61, 155, 0.3);
       border: 3px solid rgba(255, 255, 255, 0.8);
-      overflow: hidden;
+      overflow: hidden; /* crop content to circle */
     }
 
     .logo-img {
       width: 100%;
       height: 100%;
-      object-fit: cover;
+      object-fit: cover;       /* fill the circle */
+      object-position: center; /* keep center of logo visible */
+      display: block;
     }
 
     .brand-name {
@@ -221,22 +223,23 @@
       transform: translateY(-1px);
     }
 
+    /* GRID PRODUCTS: 3 per row, smaller cards */
     .products {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
-      gap: 1.75rem;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 1.1rem;
     }
 
     .product {
       position: relative;
-      background: rgba(128, 0, 255, 0.22);
-      border-radius: 18px;
+      background: rgba(128, 0, 255, 0.18);
+      border-radius: 14px;
       overflow: hidden;
-      box-shadow: 0 18px 40px rgba(70, 0, 140, 0.45);
-      backdrop-filter: blur(20px);
-      -webkit-backdrop-filter: blur(20px);
-      border: 1px solid rgba(255, 255, 255, 0.55);
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      box-shadow: 0 10px 24px rgba(70, 0, 140, 0.4);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border: 1px solid rgba(255, 255, 255, 0.5);
+      transition: transform 0.22s ease, box-shadow 0.22s ease;
     }
 
     .product::before {
@@ -247,53 +250,53 @@
       width: 60%;
       height: 60%;
       background: radial-gradient(circle at top right, rgba(255, 255, 255, 0.7), transparent 60%);
-      opacity: 0.55;
+      opacity: 0.5;
       pointer-events: none;
     }
 
     .product:hover {
-      transform: translateY(-10px);
-      box-shadow: 0 26px 60px rgba(42, 9, 92, 0.6);
+      transform: translateY(-4px);
+      box-shadow: 0 16px 30px rgba(42, 9, 92, 0.55);
     }
 
     .product img {
       width: 100%;
-      height: 190px;
+      height: 120px;
       object-fit: cover;
       opacity: 0.95;
       display: block;
     }
 
     .product-info {
-      padding: 0.9rem 1rem 1.2rem;
+      padding: 0.45rem 0.6rem 0.6rem;
       text-align: center;
       color: #000000;
     }
 
     .product-info h3 {
-      margin-bottom: 0.35rem;
-      font-size: 1rem;
+      margin-bottom: 0.2rem;
+      font-size: 0.8rem;
     }
 
     .price {
-      font-size: 1.1rem;
-      font-weight: bold;
+      font-size: 0.85rem;
+      font-weight: 700;
       color: #000000;
-      margin-bottom: 0.5rem;
+      margin-bottom: 0.3rem;
     }
 
     .buy-btn {
       display: inline-block;
-      margin-top: 0.2rem;
-      padding: 0.45rem 1.2rem;
+      margin-top: 0.05rem;
+      padding: 0.28rem 0.75rem;
       border-radius: 999px;
       border: none;
       cursor: pointer;
       font-weight: 600;
-      font-size: 0.9rem;
+      font-size: 0.75rem;
       background: #ffffff;
       color: #6e37d6;
-      box-shadow: 0 8px 18px rgba(42, 9, 92, 0.45);
+      box-shadow: 0 5px 11px rgba(42, 9, 92, 0.4);
       transition: transform 0.2s, box-shadow 0.2s, background 0.2s, color 0.2s;
     }
 
@@ -301,7 +304,7 @@
       transform: translateY(-2px);
       background: linear-gradient(135deg, #8a51ff, #d08dff);
       color: #ffffff;
-      box-shadow: 0 12px 26px rgba(42, 9, 92, 0.7);
+      box-shadow: 0 9px 18px rgba(42, 9, 92, 0.6);
     }
 
     #about {
@@ -383,10 +386,6 @@
         min-height: 55vh;
       }
 
-      .products {
-        grid-template-columns: 1fr;
-      }
-
       .header-hero-wrapper {
         background-attachment: scroll;
       }
@@ -405,6 +404,10 @@
       .section {
         padding-inline: 1.1rem;
       }
+
+      .products {
+        grid-template-columns: 1fr;
+      }
     }
   </style>
 </head>
@@ -414,7 +417,11 @@
   <div class="header-hero-wrapper">
     <div class="logo-wrapper">
       <div class="logo-circle">
-        <img src="https://i.ibb.co/dJs9w5fg/LOGO-edited-page-0001.jpg" alt="LOGO edited page 0001" border="0">
+        <img
+          src="https://i.ibb.co/dJs9w5fg/LOGO-edited-page-0001.jpg"
+          alt="Reveuse Treats Logo"
+          class="logo-img"
+        >
       </div>
     </div>
 
@@ -447,7 +454,7 @@
     <section id="home" class="hero">
       <div class="hero-inner">
         <h1>Fresh, Fluffy & Fabulous.</h1>
-        <p><b>Hand-crafted Cakes,Cookies and Brownies baked every morning in the heart of your city.</b></p>
+        <p><b>Hand-crafted Cakes, Cookies and Brownies baked every morning in the heart of your city.</b></p>
       </div>
     </section>
   </div>
@@ -455,34 +462,173 @@
   <section id="menu" class="section">
     <h2>Our Delights</h2>
     <div class="filter-btns">
-      <button class="filter-btn active" data-category="cake">Cakes</button>
+      <button class="filter-btn active" data-category="half-kg">Half KG Cakes</button>
+      <button class="filter-btn" data-category="one-kg">1 KG Cakes</button>
       <button class="filter-btn" data-category="brownies">Brownies</button>
     </div>
 
     <div class="products">
-      <div class="product" data-category="cake">
-        <img src="https://via.placeholder.com/250x200/FFB6C1/8B008B?text=Chocolate+Cake" alt="Chocolate Cake">
+      <!-- Half KG Cakes with INR prices -->
+      <div class="product" data-category="half-kg">
+        <img src="https://via.placeholder.com/250x200/FFF5E1/8B4513?text=Vanilla" alt="Half KG Vanilla Cake">
         <div class="product-info">
-          <h3 class="item-name">Chocolate Dream Cake</h3>
-          <p class="price" data-price="25">$25</p>
+          <h3 class="item-name">Half KG Vanilla Cake</h3>
+          <p class="price" data-price="350">₹350</p>
           <button class="buy-btn">Buy Now</button>
         </div>
       </div>
 
-      <div class="product" data-category="cake">
-        <img src="https://via.placeholder.com/250x200/FADADD/8B0000?text=Red+Velvet" alt="Red Velvet Cake">
+      <div class="product" data-category="half-kg">
+        <img src="https://via.placeholder.com/250x200/FFC0CB/8B0000?text=Strawberry" alt="Half KG Strawberry Cake">
         <div class="product-info">
-          <h3 class="item-name">Red Velvet Indulgence</h3>
-          <p class="price" data-price="30">$30</p>
+          <h3 class="item-name">Half KG Strawberry Cake</h3>
+          <p class="price" data-price="350">₹350</p>
           <button class="buy-btn">Buy Now</button>
         </div>
       </div>
 
+      <div class="product" data-category="half-kg">
+        <img src="https://via.placeholder.com/250x200/FFFACD/DAA520?text=Pineapple" alt="Half KG Pineapple Cake">
+        <div class="product-info">
+          <h3 class="item-name">Half KG Pineapple Cake</h3>
+          <p class="price" data-price="400">₹400</p>
+          <button class="buy-btn">Buy Now</button>
+        </div>
+      </div>
+
+      <div class="product" data-category="half-kg">
+        <img src="https://via.placeholder.com/250x200/E6E6FA/4B0082?text=Blackcurrant" alt="Half KG Blackcurrant Cake">
+        <div class="product-info">
+          <h3 class="item-name">Half KG Blackcurrant Cake</h3>
+          <p class="price" data-price="400">₹400</p>
+          <button class="buy-btn">Buy Now</button>
+        </div>
+      </div>
+
+      <div class="product" data-category="half-kg">
+        <img src="https://via.placeholder.com/250x200/ADD8E6/00008B?text=Blueberry" alt="Half KG Blueberry Cake">
+        <div class="product-info">
+          <h3 class="item-name">Half KG Blueberry Cake</h3>
+          <p class="price" data-price="450">₹450</p>
+          <button class="buy-btn">Buy Now</button>
+        </div>
+      </div>
+
+      <div class="product" data-category="half-kg">
+        <img src="https://via.placeholder.com/250x200/FFEBCD/8B4513?text=Butterscotch" alt="Half KG Butterscotch Cake">
+        <div class="product-info">
+          <h3 class="item-name">Half KG Butterscotch Cake</h3>
+          <p class="price" data-price="450">₹450</p>
+          <button class="buy-btn">Buy Now</button>
+        </div>
+      </div>
+
+      <div class="product" data-category="half-kg">
+        <img src="https://via.placeholder.com/250x200/8B4513/F5F5F5?text=Choco+Truffle" alt="Half KG Choco Truffle Cake">
+        <div class="product-info">
+          <h3 class="item-name">Half KG Choco Truffle Cake</h3>
+          <p class="price" data-price="450">₹450</p>
+          <button class="buy-btn">Buy Now</button>
+        </div>
+      </div>
+
+      <div class="product" data-category="half-kg">
+        <img src="https://via.placeholder.com/250x200/4B3621/F5F5F5?text=Dutch+Chocolate" alt="Half KG Dutch Chocolate Cake">
+        <div class="product-info">
+          <h3 class="item-name">Half KG Dutch Chocolate Cake</h3>
+          <p class="price" data-price="500">₹500</p>
+          <button class="buy-btn">Buy Now</button>
+        </div>
+      </div>
+
+      <div class="product" data-category="half-kg">
+        <img src="https://via.placeholder.com/250x200/8B0000/FFFFFF?text=Choco+Strawberry" alt="Half KG Chocolate Strawberry Cake">
+        <div class="product-info">
+          <h3 class="item-name">Half KG Chocolate Strawberry Cake</h3>
+          <p class="price" data-price="500">₹500</p>
+          <button class="buy-btn">Buy Now</button>
+        </div>
+      </div>
+
+      <div class="product" data-category="half-kg">
+        <img src="https://via.placeholder.com/250x200/8B4513/FFDAB9?text=Choco+Caramel" alt="Half KG Chocolate Caramel Cake">
+        <div class="product-info">
+          <h3 class="item-name">Half KG Chocolate Caramel Cake</h3>
+          <p class="price" data-price="500">₹500</p>
+          <button class="buy-btn">Buy Now</button>
+        </div>
+      </div>
+
+      <div class="product" data-category="half-kg">
+        <img src="https://via.placeholder.com/250x200/3C2F2F/F5F5F5?text=Mocha+Chocolate" alt="Half KG Mocha Chocolate Cake">
+        <div class="product-info">
+          <h3 class="item-name">Half KG Mocha Chocolate Cake</h3>
+          <p class="price" data-price="550">₹550</p>
+          <button class="buy-btn">Buy Now</button>
+        </div>
+      </div>
+
+      <div class="product" data-category="half-kg">
+        <img src="https://via.placeholder.com/250x200/FFB6C1/8B0000?text=Red+Velvet" alt="Half KG Red Velvet Cake">
+        <div class="product-info">
+          <h3 class="item-name">Half KG Red Velvet Cake</h3>
+          <p class="price" data-price="550">₹550</p>
+          <button class="buy-btn">Buy Now</button>
+        </div>
+      </div>
+
+      <div class="product" data-category="half-kg">
+        <img src="https://via.placeholder.com/250x200/FDFD96/FF69B4?text=Rainbow" alt="Half KG Rainbow Cake">
+        <div class="product-info">
+          <h3 class="item-name">Half KG Rainbow Cake</h3>
+          <p class="price" data-price="550">₹550</p>
+          <button class="buy-btn">Buy Now</button>
+        </div>
+      </div>
+
+      <div class="product" data-category="half-kg">
+        <img src="https://via.placeholder.com/250x200/8B4513/F5F5F5?text=Black+Forest" alt="Half KG Black Forest Cake">
+        <div class="product-info">
+          <h3 class="item-name">Half KG Black Forest Cake</h3>
+          <p class="price" data-price="450">₹450</p>
+          <button class="buy-btn">Buy Now</button>
+        </div>
+      </div>
+
+      <div class="product" data-category="half-kg">
+        <img src="https://via.placeholder.com/250x200/F5F5F5/000000?text=White+Forest" alt="Half KG White Forest Cake">
+        <div class="product-info">
+          <h3 class="item-name">Half KG White Forest Cake</h3>
+          <p class="price" data-price="450">₹450</p>
+          <button class="buy-btn">Buy Now</button>
+        </div>
+      </div>
+
+      <!-- 1 KG Cakes (placeholder items) -->
+      <div class="product" data-category="one-kg">
+        <img src="https://via.placeholder.com/250x200/FFC0CB/800000?text=1KG+Chocolate" alt="1 KG Chocolate Cake">
+        <div class="product-info">
+          <h3 class="item-name">1 KG Celebration Chocolate</h3>
+          <p class="price" data-price="900">₹900</p>
+          <button class="buy-btn">Buy Now</button>
+        </div>
+      </div>
+
+      <div class="product" data-category="one-kg">
+        <img src="https://via.placeholder.com/250x200/FFE4E1/8B0000?text=1KG+Red+Velvet" alt="1 KG Red Velvet Cake">
+        <div class="product-info">
+          <h3 class="item-name">1 KG Signature Red Velvet</h3>
+          <p class="price" data-price="950">₹950</p>
+          <button class="buy-btn">Buy Now</button>
+        </div>
+      </div>
+
+      <!-- Brownies -->
       <div class="product" data-category="brownies">
         <img src="https://via.placeholder.com/250x200/8B4513/FFF5EE?text=Brownies" alt="Fudge Brownies">
         <div class="product-info">
           <h3 class="item-name">Classic Fudge Brownies</h3>
-          <p class="price" data-price="12">$12</p>
+          <p class="price" data-price="300">₹300</p>
           <button class="buy-btn">Buy Now</button>
         </div>
       </div>
@@ -491,7 +637,7 @@
         <img src="https://via.placeholder.com/250x200/BC8F8F/FFFFFF?text=Walnut+Brownies" alt="Walnut Brownies">
         <div class="product-info">
           <h3 class="item-name">Walnut Crunch Brownies</h3>
-          <p class="price" data-price="14">$14</p>
+          <p class="price" data-price="350">₹350</p>
           <button class="buy-btn">Buy Now</button>
         </div>
       </div>
@@ -536,6 +682,21 @@
       });
     });
 
+    // APPLY INITIAL FILTER ON LOAD (show only Half KG Cakes by default)
+    window.addEventListener('DOMContentLoaded', () => {
+      const activeBtn = document.querySelector('.filter-btn.active');
+      if (!activeBtn) return;
+
+      const initialCategory = activeBtn.dataset.category;
+      products.forEach(product => {
+        if (product.dataset.category === initialCategory) {
+          product.style.display = 'block';
+        } else {
+          product.style.display = 'none';
+        }
+      });
+    });
+
     // CONTACT FORM → WHATSAPP
     const CONTACT_WHATSAPP = "919498024662";
 
@@ -563,7 +724,7 @@
 
     // WHATSAPP BUY NOW (products)
     function openWhatsApp(itemName, price) {
-      const message = `Greetings Reveuse Treats, I would like to order: ${itemName} (Price: $${price}).`;
+      const message = `Greetings Reveuse Treats, I would like to order: ${itemName} (Price: ₹${price}).`;
       const encodedMessage = encodeURIComponent(message);
       const url = `https://wa.me/${CONTACT_WHATSAPP}?text=${encodedMessage}`;
       window.open(url, "_blank");
@@ -580,4 +741,3 @@
   </script>
 </body>
 </html>
-
