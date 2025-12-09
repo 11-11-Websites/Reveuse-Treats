@@ -158,7 +158,7 @@
       background-size: cover;
       background-position: center;
       background-repeat: no-repeat;
-      background-attachment: fixed; /* optional */
+      background-attachment: fixed;
       min-height: 100vh;
       position: relative;
       padding-bottom: 2rem;
@@ -168,7 +168,7 @@
       content: '';
       position: absolute;
       inset: 0;
-      background: rgba(255, 255, 255, 0.4); /* overlay for readability */
+      background: rgba(255, 255, 255, 0.4);
       backdrop-filter: blur(2px);
       z-index: 1;
     }
@@ -455,10 +455,8 @@
   <section id="menu" class="section">
     <h2>Our Delights</h2>
     <div class="filter-btns">
-      <button class="filter-btn active" data-category="all">All</button>
-      <button class="filter-btn" data-category="cake">Cakes</button>
-      <button class="filter-btn" data-category="bread">Breads</button>
-      <button class="filter-btn" data-category="gluten-free">Gluten-Free</button>
+      <button class="filter-btn active" data-category="cake">Cakes</button>
+      <button class="filter-btn" data-category="brownies">Brownies</button>
     </div>
 
     <div class="products">
@@ -471,20 +469,29 @@
         </div>
       </div>
 
-      <div class="product" data-category="bread">
-        <img src="https://via.placeholder.com/250x200/D8BFD8/4B0082?text=Fresh+Bread" alt="Fresh Bread">
+      <div class="product" data-category="cake">
+        <img src="https://via.placeholder.com/250x200/FADADD/8B0000?text=Red+Velvet" alt="Red Velvet Cake">
         <div class="product-info">
-          <h3 class="item-name">Artisan Sourdough</h3>
-          <p class="price" data-price="5">$5</p>
+          <h3 class="item-name">Red Velvet Indulgence</h3>
+          <p class="price" data-price="30">$30</p>
           <button class="buy-btn">Buy Now</button>
         </div>
       </div>
 
-      <div class="product" data-category="gluten-free">
-        <img src="https://via.placeholder.com/250x200/E6E6FA/800080?text=GF+Muffin" alt="Gluten-Free Muffin">
+      <div class="product" data-category="brownies">
+        <img src="https://via.placeholder.com/250x200/8B4513/FFF5EE?text=Brownies" alt="Fudge Brownies">
         <div class="product-info">
-          <h3 class="item-name">Gluten-Free Berry Muffin</h3>
-          <p class="price" data-price="4">$4</p>
+          <h3 class="item-name">Classic Fudge Brownies</h3>
+          <p class="price" data-price="12">$12</p>
+          <button class="buy-btn">Buy Now</button>
+        </div>
+      </div>
+
+      <div class="product" data-category="brownies">
+        <img src="https://via.placeholder.com/250x200/BC8F8F/FFFFFF?text=Walnut+Brownies" alt="Walnut Brownies">
+        <div class="product-info">
+          <h3 class="item-name">Walnut Crunch Brownies</h3>
+          <p class="price" data-price="14">$14</p>
           <button class="buy-btn">Buy Now</button>
         </div>
       </div>
@@ -520,7 +527,7 @@
         const category = btn.dataset.category;
 
         products.forEach(product => {
-          if (category === 'all' || product.dataset.category === category) {
+          if (product.dataset.category === category) {
             product.style.display = 'block';
           } else {
             product.style.display = 'none';
