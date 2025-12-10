@@ -150,7 +150,7 @@
     }
 
     .header-hero-wrapper {
-      background-image: url('https://github.com/11-11-Websites/Reveuse-Treats/blob/main/images/Bakery BG.jpeg?raw=true');
+      background-image: url('https://github.com/11-11-Websites/Reveuse-Treats/blob/main/images/Bakery%20BG.jpeg?raw=true');
       background-size: cover;
       background-position: center;
       background-repeat: no-repeat;
@@ -219,8 +219,8 @@
 
     .products {
       display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 1.1rem;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 1.3rem;
     }
 
     .product {
@@ -234,6 +234,7 @@
       border: 1px solid rgba(255, 255, 255, 0.5);
       transition: transform 0.22s ease, box-shadow 0.22s ease;
       display: block;
+      padding-bottom: 0.3rem;
     }
 
     .product::before {
@@ -255,39 +256,49 @@
 
     .product img {
       width: 100%;
-      height: 120px;
-      object-fit: cover;
-      opacity: 0.95;
-      display: block;
+      height: auto;
+      object-fit: contain;
+      object-position: center;
     }
 
     .product-info {
-      padding: 0.45rem 0.6rem 0.6rem;
+      padding: 0.6rem 0.75rem 0.85rem;
       text-align: center;
       color: #000000;
     }
 
     .product-info h3 {
-      margin-bottom: 0.2rem;
-      font-size: 0.8rem;
+      margin-bottom: 0.3rem;
+      font-size: 0.9rem;
     }
 
     .price {
-      font-size: 0.85rem;
+      font-size: 0.9rem;
       font-weight: 700;
       color: #000000;
-      margin-bottom: 0.3rem;
+      margin-bottom: 0.4rem;
+    }
+
+    .old-price {
+      text-decoration: line-through;
+      opacity: 0.7;
+      margin-right: 0.25rem;
+      font-weight: 500;
+    }
+
+    .new-price {
+      font-weight: 700;
     }
 
     .buy-btn {
       display: inline-block;
       margin-top: 0.05rem;
-      padding: 0.28rem 0.75rem;
+      padding: 0.35rem 0.9rem;
       border-radius: 999px;
       border: none;
       cursor: pointer;
       font-weight: 600;
-      font-size: 0.75rem;
+      font-size: 0.8rem;
       background: #ffffff;
       color: #6e37d6;
       box-shadow: 0 5px 11px rgba(42, 9, 92, 0.4);
@@ -363,6 +374,27 @@
       font-size: 0.85rem;
     }
 
+    .contact-wrapper {
+      max-width: 50rem;
+      margin: 0 auto;
+      display: flex;
+      gap: 2rem;
+      align-items: flex-start;
+    }
+
+    .contact-details {
+      flex: 1;
+      font-size: 0.95rem;
+    }
+
+    .contact-details b {
+      color: #3b1f6b;
+    }
+
+    .contact-form-column {
+      flex: 1;
+    }
+
     @media (max-width: 768px) {
       nav {
         flex-direction: column;
@@ -382,6 +414,10 @@
 
       .header-hero-wrapper {
         background-attachment: scroll;
+      }
+
+      .contact-wrapper {
+        flex-direction: column;
       }
     }
 
@@ -411,7 +447,7 @@
     <div class="logo-wrapper">
       <div class="logo-circle">
         <img
-          src="https://i.ibb.co/dJs9w5fg/LOGO-edited-page-0001.jpg"
+          src="https://github.com/11-11-Websites/Reveuse-Treats/blob/main/images/LOGO.jpg?raw=true"
           alt="Reveuse Treats Logo"
           class="logo-img"
         >
@@ -425,7 +461,7 @@
     <nav>
       <div class="nav-left-icons">
         <a href="tel:919498024662" title="Call">📞 Call</a>
-        <a href="https://wa.me/919498024662" target="_blank" title="WhatsApp">💬 Chat</a>
+        <a href="https://wa.me/918754499266" target="_blank" title="WhatsApp">💬 Chat</a>
         <a href="mailto:reveusetreats@gmail.com" title="Mail">✉️ Mail</a>
         <a href="https://www.google.com/maps/search/?api=1&query=Reveuse+Treats+Bakery"
            target="_blank" title="Location">📍 Location</a>
@@ -441,14 +477,31 @@
 
     <section id="home" class="hero">
       <div class="hero-inner">
-        <h1>Fresh, Fluffy & Fabulous.</h1>
-        <p><b>Hand-crafted Cakes, Cookies and Brownies baked every morning in the heart of your city.</b></p>
+        <h1>Rêveuse Treats- Made for your Sweetest dreams.</h1>
+        <p><b>Hand-crafted Cakes, Cookies and Brownies baked every morning in the heart of your city.</b></p><br>
+        <p style="margin-top: 0.75rem; color: #e32636; font-weight: 1000;">
+          Taking only Pre-Orders. Order before 2 days.
+        </p>
       </div>
     </section>
   </div>
 
+  <section class="section">
+    <h2>We also Provide</h2>
+      <li><b><ul>Cupcakes</ul><br></li>
+      <li><ul>Bento Cakes (Starting from ₹200)</ul><br></li>
+      <li><ul>Cookies, Brownies</ul><br></li>
+      <li><ul>Special orders for Celebration, Parties, Events, etc....</ul></b></li>
+  </section>
+
   <section id="menu" class="section">
-    <h2>Our Delights</h2>
+    <h2>Our Delights</h2><br>
+    <li>
+     <ul><b>Delivery Charge will be added.</b></ul>
+    </li>
+    <li>
+     <ul><b>Extra charges for Customisation (Fondant work, Chocolate work, Toppers, etc...)</b></ul>
+    </li><br>
     <div class="filter-btns">
       <button class="filter-btn active" data-category="half-kg">Half KG Cakes</button>
       <button class="filter-btn" data-category="one-kg">1 KG Cakes</button>
@@ -458,7 +511,7 @@
     <div class="products">
       <!-- Half KG Cakes -->
       <div class="product" data-category="half-kg">
-        <img src="https://via.placeholder.com/250x200/FFF5E1/8B4513?text=Vanilla" alt="Half KG Vanilla Cake">
+        <img src="https://github.com/11-11-Websites/Reveuse-Treats/blob/main/images/Menu/Cakes/Vanilla.jpg?raw=true" alt="Half KG Vanilla Cake">
         <div class="product-info">
           <h3 class="item-name">Half KG Vanilla Cake</h3>
           <p class="price" data-price="350">₹350</p>
@@ -467,7 +520,7 @@
       </div>
 
       <div class="product" data-category="half-kg">
-        <img src="https://via.placeholder.com/250x200/FFC0CB/8B0000?text=Strawberry" alt="Half KG Strawberry Cake">
+        <img src="https://github.com/11-11-Websites/Reveuse-Treats/blob/main/images/Menu/Cakes/Strawberry.jpg?raw=true" alt="Half KG Strawberry Cake">
         <div class="product-info">
           <h3 class="item-name">Half KG Strawberry Cake</h3>
           <p class="price" data-price="350">₹350</p>
@@ -476,7 +529,7 @@
       </div>
 
       <div class="product" data-category="half-kg">
-        <img src="https://via.placeholder.com/250x200/FFFACD/DAA520?text=Pineapple" alt="Half KG Pineapple Cake">
+        <img src="https://github.com/11-11-Websites/Reveuse-Treats/blob/main/images/Menu/Cakes/Exotic%20Pineapple%20Cake.jpeg?raw=true" alt="Half KG Pineapple Cake">
         <div class="product-info">
           <h3 class="item-name">Half KG Pineapple Cake</h3>
           <p class="price" data-price="400">₹400</p>
@@ -485,7 +538,7 @@
       </div>
 
       <div class="product" data-category="half-kg">
-        <img src="https://via.placeholder.com/250x200/E6E6FA/4B0082?text=Blackcurrant" alt="Half KG Blackcurrant Cake">
+        <img src="https://github.com/11-11-Websites/Reveuse-Treats/blob/main/images/Menu/Cakes/Blackcurrant.jpg?raw=true" alt="Half KG Blackcurrant Cake">
         <div class="product-info">
           <h3 class="item-name">Half KG Blackcurrant Cake</h3>
           <p class="price" data-price="400">₹400</p>
@@ -494,7 +547,7 @@
       </div>
 
       <div class="product" data-category="half-kg">
-        <img src="https://via.placeholder.com/250x200/ADD8E6/00008B?text=Blueberry" alt="Half KG Blueberry Cake">
+        <img src="https://github.com/11-11-Websites/Reveuse-Treats/blob/main/images/Menu/Cakes/Blueberry.jpg?raw=true" alt="Half KG Blueberry Cake">
         <div class="product-info">
           <h3 class="item-name">Half KG Blueberry Cake</h3>
           <p class="price" data-price="450">₹450</p>
@@ -503,7 +556,7 @@
       </div>
 
       <div class="product" data-category="half-kg">
-        <img src="https://via.placeholder.com/250x200/FFEBCD/8B4513?text=Butterscotch" alt="Half KG Butterscotch Cake">
+        <img src="https://github.com/11-11-Websites/Reveuse-Treats/blob/main/images/Menu/Cakes/Butterscotch.jpg?raw=true" alt="Half KG Butterscotch Cake">
         <div class="product-info">
           <h3 class="item-name">Half KG Butterscotch Cake</h3>
           <p class="price" data-price="450">₹450</p>
@@ -512,7 +565,7 @@
       </div>
 
       <div class="product" data-category="half-kg">
-        <img src="https://via.placeholder.com/250x200/8B4513/F5F5F5?text=Choco+Truffle" alt="Half KG Choco Truffle Cake">
+        <img src="https://github.com/11-11-Websites/Reveuse-Treats/blob/main/images/Menu/Cakes/choco%20truffle.jpg?raw=true" alt="Half KG Choco Truffle Cake">
         <div class="product-info">
           <h3 class="item-name">Half KG Choco Truffle Cake</h3>
           <p class="price" data-price="450">₹450</p>
@@ -521,7 +574,7 @@
       </div>
 
       <div class="product" data-category="half-kg">
-        <img src="https://via.placeholder.com/250x200/4B3621/F5F5F5?text=Dutch+Chocolate" alt="Half KG Dutch Chocolate Cake">
+        <img src="https://github.com/11-11-Websites/Reveuse-Treats/blob/main/images/Menu/Cakes/Dutch%20Chocolate.jpg?raw=true" alt="Half KG Dutch Chocolate Cake">
         <div class="product-info">
           <h3 class="item-name">Half KG Dutch Chocolate Cake</h3>
           <p class="price" data-price="500">₹500</p>
@@ -530,7 +583,7 @@
       </div>
 
       <div class="product" data-category="half-kg">
-        <img src="https://via.placeholder.com/250x200/8B0000/FFFFFF?text=Choco+Strawberry" alt="Half KG Chocolate Strawberry Cake">
+        <img src="https://github.com/11-11-Websites/Reveuse-Treats/blob/main/images/Menu/Cakes/chocolate%20strawberry.jpg?raw=true" alt="Half KG Chocolate Strawberry Cake">
         <div class="product-info">
           <h3 class="item-name">Half KG Chocolate Strawberry Cake</h3>
           <p class="price" data-price="500">₹500</p>
@@ -539,7 +592,7 @@
       </div>
 
       <div class="product" data-category="half-kg">
-        <img src="https://via.placeholder.com/250x200/8B4513/FFDAB9?text=Choco+Caramel" alt="Half KG Chocolate Caramel Cake">
+        <img src="https://github.com/11-11-Websites/Reveuse-Treats/blob/main/images/Menu/Cakes/chocolate%20caramel.jpg?raw=true" alt="Half KG Chocolate Caramel Cake">
         <div class="product-info">
           <h3 class="item-name">Half KG Chocolate Caramel Cake</h3>
           <p class="price" data-price="500">₹500</p>
@@ -548,7 +601,7 @@
       </div>
 
       <div class="product" data-category="half-kg">
-        <img src="https://via.placeholder.com/250x200/3C2F2F/F5F5F5?text=Mocha+Chocolate" alt="Half KG Mocha Chocolate Cake">
+        <img src="https://github.com/11-11-Websites/Reveuse-Treats/blob/main/images/Menu/Cakes/Chocolate%20Mocha.jpg?raw=true" alt="Half KG Mocha Chocolate Cake">
         <div class="product-info">
           <h3 class="item-name">Half KG Mocha Chocolate Cake</h3>
           <p class="price" data-price="550">₹550</p>
@@ -557,7 +610,7 @@
       </div>
 
       <div class="product" data-category="half-kg">
-        <img src="https://via.placeholder.com/250x200/FFB6C1/8B0000?text=Red+Velvet" alt="Half KG Red Velvet Cake">
+        <img src="https://github.com/11-11-Websites/Reveuse-Treats/blob/main/images/Menu/Cakes/red%20velvet.jpg?raw=true" alt="Half KG Red Velvet Cake">
         <div class="product-info">
           <h3 class="item-name">Half KG Red Velvet Cake</h3>
           <p class="price" data-price="550">₹550</p>
@@ -566,7 +619,7 @@
       </div>
 
       <div class="product" data-category="half-kg">
-        <img src="https://via.placeholder.com/250x200/FDFD96/FF69B4?text=Rainbow" alt="Half KG Rainbow Cake">
+        <img src="https://github.com/11-11-Websites/Reveuse-Treats/blob/main/images/Menu/Cakes/rainbow%20cake.jpg?raw=true" alt="Half KG Rainbow Cake">
         <div class="product-info">
           <h3 class="item-name">Half KG Rainbow Cake</h3>
           <p class="price" data-price="550">₹550</p>
@@ -575,7 +628,7 @@
       </div>
 
       <div class="product" data-category="half-kg">
-        <img src="https://via.placeholder.com/250x200/8B4513/F5F5F5?text=Black+Forest" alt="Half KG Black Forest Cake">
+        <img src="https://github.com/11-11-Websites/Reveuse-Treats/blob/main/images/Menu/Cakes/Black%20Forest.jpg?raw=true" alt="Half KG Black Forest Cake">
         <div class="product-info">
           <h3 class="item-name">Half KG Black Forest Cake</h3>
           <p class="price" data-price="450">₹450</p>
@@ -584,7 +637,7 @@
       </div>
 
       <div class="product" data-category="half-kg">
-        <img src="https://via.placeholder.com/250x200/F5F5F5/000000?text=White+Forest" alt="Half KG White Forest Cake">
+        <img src="https://github.com/11-11-Websites/Reveuse-Treats/blob/main/images/Menu/Cakes/White%20Forest.jpg?raw=true" alt="Half KG White Forest Cake">
         <div class="product-info">
           <h3 class="item-name">Half KG White Forest Cake</h3>
           <p class="price" data-price="450">₹450</p>
@@ -593,56 +646,260 @@
       </div>
 
       <!-- 1 KG Cakes -->
+      <div class="product" data-category="one-kg" style="grid-column: 1 / -1; background: transparent; box-shadow: none; border: none;">
+        <div style="text-align:center; padding: 0.5rem 0 0.75rem;">
+          <h3 style="font-size:1rem; color:#3b1f6b; font-weight:800;">
+            Order 1KG and get 20% Discount
+          </h3>
+        </div>
+      </div>
+
       <div class="product" data-category="one-kg">
-        <img src="https://via.placeholder.com/250x200/FFC0CB/800000?text=1KG+Chocolate" alt="1 KG Chocolate Cake">
+        <img src="https://github.com/11-11-Websites/Reveuse-Treats/blob/main/images/Menu/Cakes/Vanilla.jpg?raw=true" alt="1 KG Vanilla Cake">
         <div class="product-info">
-          <h3 class="item-name">1 KG Celebration Chocolate</h3>
+          <h3 class="item-name">1 KG Vanilla Cake</h3>
+          <p class="price" data-price="550">
+            <span class="old-price">₹700</span>
+            <span class="new-price">₹550</span>
+          </p>
+          <button class="buy-btn">Buy Now</button>
+        </div>
+      </div>
+
+      <div class="product" data-category="one-kg">
+        <img src="https://github.com/11-11-Websites/Reveuse-Treats/blob/main/images/Menu/Cakes/Strawberry.jpg?raw=true" alt="1 KG Strawberry Cake">
+        <div class="product-info">
+          <h3 class="item-name">1 KG Strawberry Cake</h3>
+          <p class="price" data-price="550">
+            <span class="old-price">₹700</span>
+            <span class="new-price">₹550</span>
+          </p>
+          <button class="buy-btn">Buy Now</button>
+        </div>
+      </div>
+
+      <div class="product" data-category="one-kg">
+        <img src="https://github.com/11-11-Websites/Reveuse-Treats/blob/main/images/Menu/Cakes/Exotic%20Pineapple%20Cake.jpeg?raw=true" alt="1 KG Pineapple Cake">
+        <div class="product-info">
+          <h3 class="item-name">1 KG Pineapple Cake</h3>
+          <p class="price" data-price="600">
+            <span class="old-price">₹800</span>
+            <span class="new-price">₹600</span>
+          </p>
+          <button class="buy-btn">Buy Now</button>
+        </div>
+      </div>
+
+      <div class="product" data-category="one-kg">
+        <img src="https://github.com/11-11-Websites/Reveuse-Treats/blob/main/images/Menu/Cakes/Blackcurrant.jpg?raw=true" alt="1 KG Blackcurrant Cake">
+        <div class="product-info">
+          <h3 class="item-name">1 KG Blackcurrant Cake</h3>
+          <p class="price" data-price="600">
+            <span class="old-price">₹800</span>
+            <span class="new-price">₹600</span>
+          </p>
+          <button class="buy-btn">Buy Now</button>
+        </div>
+      </div>
+
+      <div class="product" data-category="one-kg">
+        <img src="https://github.com/11-11-Websites/Reveuse-Treats/blob/main/images/Menu/Cakes/Blueberry.jpg?raw=true" alt="1 KG Blueberry Cake">
+        <div class="product-info">
+          <h3 class="item-name">1 KG Blueberry Cake</h3>
+          <p class="price" data-price="650">
+            <span class="old-price">₹900</span>
+            <span class="new-price">₹650</span>
+          </p>
+          <button class="buy-btn">Buy Now</button>
+        </div>
+      </div>
+
+      <div class="product" data-category="one-kg">
+        <img src="https://github.com/11-11-Websites/Reveuse-Treats/blob/main/images/Menu/Cakes/Butterscotch.jpg?raw=true" alt="1 KG Butterscotch Cake">
+        <div class="product-info">
+          <h3 class="item-name">1 KG Butterscotch Cake</h3>
+          <p class="price" data-price="650">
+            <span class="old-price">₹900</span>
+            <span class="new-price">₹650</span>
+          </p>
+          <button class="buy-btn">Buy Now</button>
+        </div>
+      </div>
+
+      <!-- Rose Milk Cake 1 KG -->
+      <div class="product" data-category="one-kg">
+        <img src="https://github.com/11-11-Websites/Reveuse-Treats/blob/main/images/Menu/Cakes/rose%20milk.jpg?raw=true" alt="1 KG Rose Milk Cake">
+        <div class="product-info">
+          <h3 class="item-name">1 KG Rose Milk Cake</h3>
+          <p class="price" data-price="650">₹650</p>
+          <button class="buy-btn">Buy Now</button>
+        </div>
+      </div>
+
+      <!-- Choco Truffle -->
+      <div class="product" data-category="one-kg">
+        <img src="https://github.com/11-11-Websites/Reveuse-Treats/blob/main/images/Menu/Cakes/choco%20truffle.jpg?raw=true" alt="1 KG Choco Truffle Cake">
+        <div class="product-info">
+          <h3 class="item-name">1 KG Choco Truffle Cake</h3>
+          <p class="price" data-price="750">
+            <span class="old-price">₹900</span>
+            <span class="new-price">₹750</span>
+          </p>
+          <button class="buy-btn">Buy Now</button>
+        </div>
+      </div>
+
+      <!-- Black Forest -->
+      <div class="product" data-category="one-kg">
+        <img src="https://github.com/11-11-Websites/Reveuse-Treats/blob/main/images/Menu/Cakes/Black%20Forest.jpg?raw=true" alt="1 KG Black Forest Cake">
+        <div class="product-info">
+          <h3 class="item-name">1 KG Black Forest Cake</h3>
+          <p class="price" data-price="650">
+            <span class="old-price">₹900</span>
+            <span class="new-price">₹650</span>
+          </p>
+          <button class="buy-btn">Buy Now</button>
+        </div>
+      </div>
+
+      <!-- White Forest -->
+      <div class="product" data-category="one-kg">
+        <img src="https://github.com/11-11-Websites/Reveuse-Treats/blob/main/images/Menu/Cakes/White%20Forest.jpg?raw=true" alt="1 KG White Forest Cake">
+        <div class="product-info">
+          <h3 class="item-name">1 KG White Forest Cake</h3>
+          <p class="price" data-price="700">
+            <span class="old-price">₹900</span>
+            <span class="new-price">₹700</span>
+          </p>
+          <button class="buy-btn">Buy Now</button>
+        </div>
+      </div>
+
+      <!-- Dutch Chocolate -->
+      <div class="product" data-category="one-kg">
+        <img src="https://github.com/11-11-Websites/Reveuse-Treats/blob/main/images/Menu/Cakes/Dutch%20Chocolate.jpg?raw=true" alt="1 KG Dutch Chocolate Cake">
+        <div class="product-info">
+          <h3 class="item-name">1 KG Dutch Chocolate Cake</h3>
+          <p class="price" data-price="800">
+            <span class="old-price">₹1000</span>
+            <span class="new-price">₹800</span>
+          </p>
+          <button class="buy-btn">Buy Now</button>
+        </div>
+      </div>
+
+      <!-- Chocolate Strawberry -->
+      <div class="product" data-category="one-kg">
+        <img src="https://github.com/11-11-Websites/Reveuse-Treats/blob/main/images/Menu/Cakes/chocolate%20strawberryy.jpg?raw=true" alt="1 KG Chocolate Strawberry Cake">
+        <div class="product-info">
+          <h3 class="item-name">1 KG Chocolate Strawberry Cake</h3>
+          <p class="price" data-price="800">
+            <span class="old-price">₹1000</span>
+            <span class="new-price">₹800</span>
+          </p>
+          <button class="buy-btn">Buy Now</button>
+        </div>
+      </div>
+
+      <!-- Chocolate Caramel -->
+      <div class="product" data-category="one-kg">
+        <img src="https://github.com/11-11-Websites/Reveuse-Treats/blob/main/images/Menu/Cakes/chocolate%20caramel.jpg?raw=true" alt="1 KG Chocolate Caramel Cake">
+        <div class="product-info">
+          <h3 class="item-name">1 KG Chocolate Caramel Cake</h3>
+          <p class="price" data-price="800">
+            <span class="old-price">₹1000</span>
+            <span class="new-price">₹800</span>
+          </p>
+          <button class="buy-btn">Buy Now</button>
+        </div>
+      </div>
+
+      <!-- Mocha Chocolate -->
+      <div class="product" data-category="one-kg">
+        <img src="https://github.com/11-11-Websites/Reveuse-Treats/blob/main/images/Menu/Cakes/Chocolate%20Mocha.jpg?raw=true" alt="1 KG Mocha Chocolate Cake">
+        <div class="product-info">
+          <h3 class="item-name">1 KG Mocha Chocolate Cake</h3>
+          <p class="price" data-price="900">
+            <span class="old-price">₹1100</span>
+            <span class="new-price">₹900</span>
+          </p>
+          <button class="buy-btn">Buy Now</button>
+        </div>
+      </div>
+
+      <!-- Red Velvet -->
+      <div class="product" data-category="one-kg">
+        <img src="https://github.com/11-11-Websites/Reveuse-Treats/blob/main/images/Menu/Cakes/red%20velvet.jpg?raw=true" alt="1 KG Red Velvet Cake">
+        <div class="product-info">
+          <h3 class="item-name">1 KG Red Velvet Cake</h3>
+          <p class="price" data-price="900">
+            <span class="old-price">₹1100</span>
+            <span class="new-price">₹900</span>
+          </p>
+          <button class="buy-btn">Buy Now</button>
+        </div>
+      </div>
+
+      <!-- Rainbow -->
+      <div class="product" data-category="one-kg">
+        <img src="https://github.com/11-11-Websites/Reveuse-Treats/blob/main/images/Menu/Cakes/rainbow%20cake.jpg?raw=true" alt="1 KG Rainbow Cake">
+        <div class="product-info">
+          <h3 class="item-name">1 KG Rainbow Cake</h3>
+          <p class="price" data-price="900">
+            <span class="old-price">₹1100</span>
+            <span class="new-price">₹900</span>
+          </p>
+          <button class="buy-btn">Buy Now</button>
+        </div>
+      </div>
+
+      <!-- Rasmalai Cake 1 KG -->
+      <div class="product" data-category="one-kg">
+        <img src="https://github.com/11-11-Websites/Reveuse-Treats/blob/main/images/Menu/Cakes/Rasmalai.jpg?raw=true" alt="1 KG Rasmalai Cake">
+        <div class="product-info">
+          <h3 class="item-name">1 KG Rasmalai Cake</h3>
           <p class="price" data-price="900">₹900</p>
           <button class="buy-btn">Buy Now</button>
         </div>
       </div>
 
-      <div class="product" data-category="one-kg">
-        <img src="https://via.placeholder.com/250x200/FFE4E1/8B0000?text=1KG+Red+Velvet" alt="1 KG Red Velvet Cake">
+      <div class="product" data-category="brownies">
+        <img src="https://github.com/11-11-Websites/Reveuse-Treats/blob/main/images/Menu/Brownies/Brownie.jpg?raw=true" alt="Brownie">
         <div class="product-info">
-          <h3 class="item-name">1 KG Signature Red Velvet</h3>
-          <p class="price" data-price="950">₹950</p>
+          <h3 class="item-name">Brownie</h3>
+          <p class="price" data-price="800">
+            250g – ₹200<br>
+            500g – ₹400<br>
+            1 KG – ₹800
+          </p>
           <button class="buy-btn">Buy Now</button>
         </div>
       </div>
 
-      <!-- Brownies -->
-      <div class="product" data-category="brownies">
-        <img src="https://via.placeholder.com/250x200/8B4513/FFF5EE?text=Brownies" alt="Fudge Brownies">
-        <div class="product-info">
-          <h3 class="item-name">Classic Fudge Brownies</h3>
-          <p class="price" data-price="300">₹300</p>
-          <button class="buy-btn">Buy Now</button>
-        </div>
-      </div>
-
-      <div class="product" data-category="brownies">
-        <img src="https://via.placeholder.com/250x200/BC8F8F/FFFFFF?text=Walnut+Brownies" alt="Walnut Brownies">
-        <div class="product-info">
-          <h3 class="item-name">Walnut Crunch Brownies</h3>
-          <p class="price" data-price="350">₹350</p>
-          <button class="buy-btn">Buy Now</button>
-        </div>
-      </div>
     </div>
   </section>
 
   <section id="about" class="section">
     <h2>About Us</h2>
-    <p>Reveuse Treats is a family bakery known for small-batch recipes, real ingredients, and a passion for beautiful bakes.</p>
+    <p>Rêveuse Treats is a dreamy home bakery that brings joy through handcrafted desserts made with love and creativity. Inspired by sweet moments and magical flavors, we offer a delightful range of treats—from cupcakes to custom bakes—each designed to make your day a little more special. With a charming aesthetic and a passion for quality, Rêveuse Treats is where imagination meets indulgence. Perfect for gifting, celebrating, or simply treating yourself.</p>
   </section>
 
   <section id="contact" class="section">
-    <h2>Get in Touch</h2>
-    <form id="contact-form">
-      <textarea id="contact-message" placeholder="Message" rows="5" required></textarea>
-      <button type="submit">Send</button>
-    </form>
+    <h2>Contact Us</h2>
+    <div class="contact-wrapper">
+      <div class="contact-details">
+        <p>
+          <b>Contact:</b> +91 8754499266<br>
+          <b>Mail:</b> reveusetreats@gmail.com
+        </p>
+      </div>
+      <div class="contact-form-column">
+        <form id="contact-form">
+          <textarea id="contact-message" placeholder="Message" rows="5" required></textarea>
+          <button type="submit">Send</button>
+        </form>
+      </div>
+    </div>
   </section>
 
   <footer>
@@ -676,14 +933,14 @@
       });
     });
 
-    const CONTACT_WHATSAPP = "919498024662";
+    const CONTACT_WHATSAPP = "918754499266";
 
     document.getElementById('contact-form').addEventListener('submit', (e) => {
       e.preventDefault();
       const message = document.getElementById('contact-message').value.trim();
       const fullMessage = `Greetings Reveuse Treats:\nMessage: ${message}`;
       const encoded = encodeURIComponent(fullMessage);
-      const waUrl = `https://wa.me/${CONTACT_WHATSAPP}?text=${encoded}`;
+      const waUrl = `https://wa.me/${918754499266}?text=${encoded}`;
       window.open(waUrl, "_blank");
     });
 
@@ -700,7 +957,7 @@
       const message =
         `Greetings Reveuse Treats, I would like to order: ${itemName} (Price: ₹${price}).`;
       const encodedMessage = encodeURIComponent(message);
-      const url = `https://wa.me/${CONTACT_WHATSAPP}?text=${encodedMessage}`;
+      const url = `https://wa.me/${918754499266}?text=${encodedMessage}`;
       window.open(url, "_blank");
     }
 
