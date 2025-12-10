@@ -154,7 +154,7 @@
       background-size: cover;
       background-position: center;
       background-repeat: no-repeat;
-      background-attachment: fixed;
+      /* background-attachment: fixed;  REMOVED for smoother mobile scrolling [web:112] */
       min-height: 100vh;
       position: relative;
       padding-bottom: 2rem;
@@ -413,6 +413,7 @@
       }
 
       .header-hero-wrapper {
+        /* ensure no fixed background on mobile */
         background-attachment: scroll;
       }
 
@@ -511,7 +512,7 @@
     <div class="products">
       <!-- Half KG Cakes -->
       <div class="product" data-category="half-kg">
-        <img src="https://github.com/11-11-Websites/Reveuse-Treats/blob/main/images/Menu/Cakes/Vanilla.jpg?raw=true" alt="Half KG Vanilla Cake">
+        <img loading="lazy" src="https://github.com/11-11-Websites/Reveuse-Treats/blob/main/images/Menu/Cakes/Vanilla.jpg?raw=true" alt="Half KG Vanilla Cake">
         <div class="product-info">
           <h3 class="item-name">Half KG Vanilla Cake</h3>
           <p class="price" data-price="350">₹350</p>
@@ -520,7 +521,7 @@
       </div>
 
       <div class="product" data-category="half-kg">
-        <img src="https://github.com/11-11-Websites/Reveuse-Treats/blob/main/images/Menu/Cakes/Strawberryy.jpg?raw=true" alt="Half KG Strawberry Cake">
+        <img loading="lazy" src="https://github.com/11-11-Websites/Reveuse-Treats/blob/main/images/Menu/Cakes/Strawberryy.jpg?raw=true" alt="Half KG Strawberry Cake">
         <div class="product-info">
           <h3 class="item-name">Half KG Strawberry Cake</h3>
           <p class="price" data-price="350">₹350</p>
@@ -529,7 +530,7 @@
       </div>
 
       <div class="product" data-category="half-kg">
-        <img src="https://github.com/11-11-Websites/Reveuse-Treats/blob/main/images/Menu/Cakes/Exotic%20Pineapple%20Cake.jpeg?raw=true" alt="Half KG Pineapple Cake">
+        <img loading="lazy" src="https://github.com/11-11-Websites/Reveuse-Treats/blob/main/images/Menu/Cakes/Exotic%20Pineapple%20Cake.jpeg?raw=true" alt="Half KG Pineapple Cake">
         <div class="product-info">
           <h3 class="item-name">Half KG Pineapple Cake</h3>
           <p class="price" data-price="400">₹400</p>
@@ -538,7 +539,7 @@
       </div>
 
       <div class="product" data-category="half-kg">
-        <img src="https://github.com/11-11-Websites/Reveuse-Treats/blob/main/images/Menu/Cakes/Blackcurrant.jpg?raw=true" alt="Half KG Blackcurrant Cake">
+        <img loading="lazy" src="https://github.com/11-11-Websites/Reveuse-Treats/blob/main/images/Menu/Cakes/Blackcurrant.jpg?raw=true" alt="Half KG Blackcurrant Cake">
         <div class="product-info">
           <h3 class="item-name">Half KG Blackcurrant Cake</h3>
           <p class="price" data-price="400">₹400</p>
@@ -547,7 +548,7 @@
       </div>
 
       <div class="product" data-category="half-kg">
-        <img src="https://github.com/11-11-Websites/Reveuse-Treats/blob/main/images/Menu/Cakes/Blueberry.jpg?raw=true" alt="Half KG Blueberry Cake">
+        <img loading="lazy" src="https://github.com/11-11-Websites/Reveuse-Treats/blob/main/images/Menu/Cakes/Blueberry.jpg?raw=true" alt="Half KG Blueberry Cake">
         <div class="product-info">
           <h3 class="item-name">Half KG Blueberry Cake</h3>
           <p class="price" data-price="450">₹450</p>
@@ -556,7 +557,7 @@
       </div>
 
       <div class="product" data-category="half-kg">
-        <img src="https://github.com/11-11-Websites/Reveuse-Treats/blob/main/images/Menu/Cakes/Butterscotch.jpg?raw=true" alt="Half KG Butterscotch Cake">
+        <img loading="lazy" src="https://github.com/11-11-Websites/Reveuse-Treats/blob/main/images/Menu/Cakes/Butterscotch.jpg?raw=true" alt="Half KG Butterscotch Cake">
         <div class="product-info">
           <h3 class="item-name">Half KG Butterscotch Cake</h3>
           <p class="price" data-price="450">₹450</p>
@@ -565,7 +566,7 @@
       </div>
 
       <div class="product" data-category="half-kg">
-        <img src="https://github.com/11-11-Websites/Reveuse-Treats/blob/main/images/Menu/Cakes/choco%20truffle.jpg?raw=true" alt="Half KG Choco Truffle Cake">
+        <img loading="lazy" src="https://github.com/11-11-Websites/Reveuse-Treats/blob/main/images/Menu/Cakes/choco%20truffle.jpg?raw=true" alt="Half KG Choco Truffle Cake">
         <div class="product-info">
           <h3 class="item-name">Half KG Choco Truffle Cake</h3>
           <p class="price" data-price="450">₹450</p>
@@ -574,7 +575,7 @@
       </div>
 
       <div class="product" data-category="half-kg">
-        <img src="https://github.com/11-11-Websites/Reveuse-Treats/blob/main/images/Menu/Cakes/Dutch%20Chocolate.jpg?raw=true" alt="Half KG Dutch Chocolate Cake">
+        <img loading="lazy" src="https://github.com/11-11-Websites/Reveuse-Treats/blob/main/images/Menu/Cakes/Dutch%20Chocolate.jpg?raw=true" alt="Half KG Dutch Chocolate Cake">
         <div class="product-info">
           <h3 class="item-name">Half KG Dutch Chocolate Cake</h3>
           <p class="price" data-price="500">₹500</p>
@@ -583,7 +584,7 @@
       </div>
 
       <div class="product" data-category="half-kg">
-        <img src="https://github.com/11-11-Websites/Reveuse-Treats/blob/main/images/Menu/Cakes/chocolate%20strawberryy.jpg?raw=true" alt="Half KG Chocolate Strawberry Cake">
+        <img loading="lazy" src="https://github.com/11-11-Websites/Reveuse-Treats/blob/main/images/Menu/Cakes/chocolate%20strawberryy.jpg?raw=true" alt="Half KG Chocolate Strawberry Cake">
         <div class="product-info">
           <h3 class="item-name">Half KG Chocolate Strawberry Cake</h3>
           <p class="price" data-price="500">₹500</p>
@@ -592,7 +593,7 @@
       </div>
 
       <div class="product" data-category="half-kg">
-        <img src="https://github.com/11-11-Websites/Reveuse-Treats/blob/main/images/Menu/Cakes/chocolate%20caramel.jpg?raw=true" alt="Half KG Chocolate Caramel Cake">
+        <img loading="lazy" src="https://github.com/11-11-Websites/Reveuse-Treats/blob/main/images/Menu/Cakes/chocolate%20caramel.jpg?raw=true" alt="Half KG Chocolate Caramel Cake">
         <div class="product-info">
           <h3 class="item-name">Half KG Chocolate Caramel Cake</h3>
           <p class="price" data-price="500">₹500</p>
@@ -601,7 +602,7 @@
       </div>
 
       <div class="product" data-category="half-kg">
-        <img src="https://github.com/11-11-Websites/Reveuse-Treats/blob/main/images/Menu/Cakes/Chocolate%20Mocha.jpg?raw=true" alt="Half KG Mocha Chocolate Cake">
+        <img loading="lazy" src="https://github.com/11-11-Websites/Reveuse-Treats/blob/main/images/Menu/Cakes/Chocolate%20Mocha.jpg?raw=true" alt="Half KG Mocha Chocolate Cake">
         <div class="product-info">
           <h3 class="item-name">Half KG Mocha Chocolate Cake</h3>
           <p class="price" data-price="550">₹550</p>
@@ -610,7 +611,7 @@
       </div>
 
       <div class="product" data-category="half-kg">
-        <img src="https://github.com/11-11-Websites/Reveuse-Treats/blob/main/images/Menu/Cakes/red%20velvet.jpg?raw=true" alt="Half KG Red Velvet Cake">
+        <img loading="lazy" src="https://github.com/11-11-Websites/Reveuse-Treats/blob/main/images/Menu/Cakes/red%20velvet.jpg?raw=true" alt="Half KG Red Velvet Cake">
         <div class="product-info">
           <h3 class="item-name">Half KG Red Velvet Cake</h3>
           <p class="price" data-price="550">₹550</p>
@@ -619,7 +620,7 @@
       </div>
 
       <div class="product" data-category="half-kg">
-        <img src="https://github.com/11-11-Websites/Reveuse-Treats/blob/main/images/Menu/Cakes/rainbow%20cake.jpg?raw=true" alt="Half KG Rainbow Cake">
+        <img loading="lazy" src="https://github.com/11-11-Websites/Reveuse-Treats/blob/main/images/Menu/Cakes/rainbow%20cake.jpg?raw=true" alt="Half KG Rainbow Cake">
         <div class="product-info">
           <h3 class="item-name">Half KG Rainbow Cake</h3>
           <p class="price" data-price="550">₹550</p>
@@ -628,7 +629,7 @@
       </div>
 
       <div class="product" data-category="half-kg">
-        <img src="https://github.com/11-11-Websites/Reveuse-Treats/blob/main/images/Menu/Cakes/Black%20Forest.jpg?raw=true" alt="Half KG Black Forest Cake">
+        <img loading="lazy" src="https://github.com/11-11-Websites/Reveuse-Treats/blob/main/images/Menu/Cakes/Black%20Forest.jpg?raw=true" alt="Half KG Black Forest Cake">
         <div class="product-info">
           <h3 class="item-name">Half KG Black Forest Cake</h3>
           <p class="price" data-price="450">₹450</p>
@@ -637,7 +638,7 @@
       </div>
 
       <div class="product" data-category="half-kg">
-        <img src="https://github.com/11-11-Websites/Reveuse-Treats/blob/main/images/Menu/Cakes/White%20Forest.jpg?raw=true" alt="Half KG White Forest Cake">
+        <img loading="lazy" src="https://github.com/11-11-Websites/Reveuse-Treats/blob/main/images/Menu/Cakes/White%20Forest.jpg?raw=true" alt="Half KG White Forest Cake">
         <div class="product-info">
           <h3 class="item-name">Half KG White Forest Cake</h3>
           <p class="price" data-price="450">₹450</p>
@@ -655,7 +656,7 @@
       </div>
 
       <div class="product" data-category="one-kg">
-        <img src="https://github.com/11-11-Websites/Reveuse-Treats/blob/main/images/Menu/Cakes/Vanilla.jpg?raw=true" alt="1 KG Vanilla Cake">
+        <img loading="lazy" src="https://github.com/11-11-Websites/Reveuse-Treats/blob/main/images/Menu/Cakes/Vanilla.jpg?raw=true" alt="1 KG Vanilla Cake">
         <div class="product-info">
           <h3 class="item-name">1 KG Vanilla Cake</h3>
           <p class="price" data-price="550">
@@ -667,7 +668,7 @@
       </div>
 
       <div class="product" data-category="one-kg">
-        <img src="https://github.com/11-11-Websites/Reveuse-Treats/blob/main/images/Menu/Cakes/Strawberryy.jpg?raw=true" alt="1 KG Strawberry Cake">
+        <img loading="lazy" src="https://github.com/11-11-Websites/Reveuse-Treats/blob/main/images/Menu/Cakes/Strawberryy.jpg?raw=true" alt="1 KG Strawberry Cake">
         <div class="product-info">
           <h3 class="item-name">1 KG Strawberry Cake</h3>
           <p class="price" data-price="550">
@@ -679,7 +680,7 @@
       </div>
 
       <div class="product" data-category="one-kg">
-        <img src="https://github.com/11-11-Websites/Reveuse-Treats/blob/main/images/Menu/Cakes/Exotic%20Pineapple%20Cake.jpeg?raw=true" alt="1 KG Pineapple Cake">
+        <img loading="lazy" src="https://github.com/11-11-Websites/Reveuse-Treats/blob/main/images/Menu/Cakes/Exotic%20Pineapple%20Cake.jpeg?raw=true" alt="1 KG Pineapple Cake">
         <div class="product-info">
           <h3 class="item-name">1 KG Pineapple Cake</h3>
           <p class="price" data-price="600">
@@ -691,7 +692,7 @@
       </div>
 
       <div class="product" data-category="one-kg">
-        <img src="https://github.com/11-11-Websites/Reveuse-Treats/blob/main/images/Menu/Cakes/Blackcurrant.jpg?raw=true" alt="1 KG Blackcurrant Cake">
+        <img loading="lazy" src="https://github.com/11-11-Websites/Reveuse-Treats/blob/main/images/Menu/Cakes/Blackcurrant.jpg?raw=true" alt="1 KG Blackcurrant Cake">
         <div class="product-info">
           <h3 class="item-name">1 KG Blackcurrant Cake</h3>
           <p class="price" data-price="600">
@@ -703,7 +704,7 @@
       </div>
 
       <div class="product" data-category="one-kg">
-        <img src="https://github.com/11-11-Websites/Reveuse-Treats/blob/main/images/Menu/Cakes/Blueberry.jpg?raw=true" alt="1 KG Blueberry Cake">
+        <img loading="lazy" src="https://github.com/11-11-Websites/Reveuse-Treats/blob/main/images/Menu/Cakes/Blueberry.jpg?raw=true" alt="1 KG Blueberry Cake">
         <div class="product-info">
           <h3 class="item-name">1 KG Blueberry Cake</h3>
           <p class="price" data-price="650">
@@ -715,7 +716,7 @@
       </div>
 
       <div class="product" data-category="one-kg">
-        <img src="https://github.com/11-11-Websites/Reveuse-Treats/blob/main/images/Menu/Cakes/Butterscotch.jpg?raw=true" alt="1 KG Butterscotch Cake">
+        <img loading="lazy" src="https://github.com/11-11-Websites/Reveuse-Treats/blob/main/images/Menu/Cakes/Butterscotch.jpg?raw=true" alt="1 KG Butterscotch Cake">
         <div class="product-info">
           <h3 class="item-name">1 KG Butterscotch Cake</h3>
           <p class="price" data-price="650">
@@ -728,7 +729,7 @@
 
       <!-- Rose Milk Cake 1 KG -->
       <div class="product" data-category="one-kg">
-        <img src="https://github.com/11-11-Websites/Reveuse-Treats/blob/main/images/Menu/Cakes/rose%20milk.jpg?raw=true" alt="1 KG Rose Milk Cake">
+        <img loading="lazy" src="https://github.com/11-11-Websites/Reveuse-Treats/blob/main/images/Menu/Cakes/rose%20milk.jpg?raw=true" alt="1 KG Rose Milk Cake">
         <div class="product-info">
           <h3 class="item-name">1 KG Rose Milk Cake</h3>
           <p class="price" data-price="650">₹650</p>
@@ -738,7 +739,7 @@
 
       <!-- Choco Truffle -->
       <div class="product" data-category="one-kg">
-        <img src="https://github.com/11-11-Websites/Reveuse-Treats/blob/main/images/Menu/Cakes/choco%20truffle.jpg?raw=true" alt="1 KG Choco Truffle Cake">
+        <img loading="lazy" src="https://github.com/11-11-Websites/Reveuse-Treats/blob/main/images/Menu/Cakes/choco%20truffle.jpg?raw=true" alt="1 KG Choco Truffle Cake">
         <div class="product-info">
           <h3 class="item-name">1 KG Choco Truffle Cake</h3>
           <p class="price" data-price="750">
@@ -751,7 +752,7 @@
 
       <!-- Black Forest -->
       <div class="product" data-category="one-kg">
-        <img src="https://github.com/11-11-Websites/Reveuse-Treats/blob/main/images/Menu/Cakes/Black%20Forest.jpg?raw=true" alt="1 KG Black Forest Cake">
+        <img loading="lazy" src="https://github.com/11-11-Websites/Reveuse-Treats/blob/main/images/Menu/Cakes/Black%20Forest.jpg?raw=true" alt="1 KG Black Forest Cake">
         <div class="product-info">
           <h3 class="item-name">1 KG Black Forest Cake</h3>
           <p class="price" data-price="650">
@@ -764,7 +765,7 @@
 
       <!-- White Forest -->
       <div class="product" data-category="one-kg">
-        <img src="https://github.com/11-11-Websites/Reveuse-Treats/blob/main/images/Menu/Cakes/White%20Forest.jpg?raw=true" alt="1 KG White Forest Cake">
+        <img loading="lazy" src="https://github.com/11-11-Websites/Reveuse-Treats/blob/main/images/Menu/Cakes/White%20Forest.jpg?raw=true" alt="1 KG White Forest Cake">
         <div class="product-info">
           <h3 class="item-name">1 KG White Forest Cake</h3>
           <p class="price" data-price="700">
@@ -777,7 +778,7 @@
 
       <!-- Dutch Chocolate -->
       <div class="product" data-category="one-kg">
-        <img src="https://github.com/11-11-Websites/Reveuse-Treats/blob/main/images/Menu/Cakes/Dutch%20Chocolate.jpg?raw=true" alt="1 KG Dutch Chocolate Cake">
+        <img loading="lazy" src="https://github.com/11-11-Websites/Reveuse-Treats/blob/main/images/Menu/Cakes/Dutch%20Chocolate.jpg?raw=true" alt="1 KG Dutch Chocolate Cake">
         <div class="product-info">
           <h3 class="item-name">1 KG Dutch Chocolate Cake</h3>
           <p class="price" data-price="800">
@@ -790,7 +791,7 @@
 
       <!-- Chocolate Strawberry -->
       <div class="product" data-category="one-kg">
-        <img src="https://github.com/11-11-Websites/Reveuse-Treats/blob/main/images/Menu/Cakes/chocolate%20strawberryy.jpg?raw=true" alt="1 KG Chocolate Strawberry Cake">
+        <img loading="lazy" src="https://github.com/11-11-Websites/Reveuse-Treats/blob/main/images/Menu/Cakes/chocolate%20strawberryy.jpg?raw=true" alt="1 KG Chocolate Strawberry Cake">
         <div class="product-info">
           <h3 class="item-name">1 KG Chocolate Strawberry Cake</h3>
           <p class="price" data-price="800">
@@ -803,7 +804,7 @@
 
       <!-- Chocolate Caramel -->
       <div class="product" data-category="one-kg">
-        <img src="https://github.com/11-11-Websites/Reveuse-Treats/blob/main/images/Menu/Cakes/chocolate%20caramel.jpg?raw=true" alt="1 KG Chocolate Caramel Cake">
+        <img loading="lazy" src="https://github.com/11-11-Websites/Reveuse-Treats/blob/main/images/Menu/Cakes/chocolate%20caramel.jpg?raw=true" alt="1 KG Chocolate Caramel Cake">
         <div class="product-info">
           <h3 class="item-name">1 KG Chocolate Caramel Cake</h3>
           <p class="price" data-price="800">
@@ -816,7 +817,7 @@
 
       <!-- Mocha Chocolate -->
       <div class="product" data-category="one-kg">
-        <img src="https://github.com/11-11-Websites/Reveuse-Treats/blob/main/images/Menu/Cakes/Chocolate%20Mocha.jpg?raw=true" alt="1 KG Mocha Chocolate Cake">
+        <img loading="lazy" src="https://github.com/11-11-Websites/Reveuse-Treats/blob/main/images/Menu/Cakes/Chocolate%20Mocha.jpg?raw=true" alt="1 KG Mocha Chocolate Cake">
         <div class="product-info">
           <h3 class="item-name">1 KG Mocha Chocolate Cake</h3>
           <p class="price" data-price="900">
@@ -829,7 +830,7 @@
 
       <!-- Red Velvet -->
       <div class="product" data-category="one-kg">
-        <img src="https://github.com/11-11-Websites/Reveuse-Treats/blob/main/images/Menu/Cakes/red%20velvet.jpg?raw=true" alt="1 KG Red Velvet Cake">
+        <img loading="lazy" src="https://github.com/11-11-Websites/Reveuse-Treats/blob/main/images/Menu/Cakes/red%20velvet.jpg?raw=true" alt="1 KG Red Velvet Cake">
         <div class="product-info">
           <h3 class="item-name">1 KG Red Velvet Cake</h3>
           <p class="price" data-price="900">
@@ -842,7 +843,7 @@
 
       <!-- Rainbow -->
       <div class="product" data-category="one-kg">
-        <img src="https://github.com/11-11-Websites/Reveuse-Treats/blob/main/images/Menu/Cakes/rainbow%20cake.jpg?raw=true" alt="1 KG Rainbow Cake">
+        <img loading="lazy" src="https://github.com/11-11-Websites/Reveuse-Treats/blob/main/images/Menu/Cakes/rainbow%20cake.jpg?raw=true" alt="1 KG Rainbow Cake">
         <div class="product-info">
           <h3 class="item-name">1 KG Rainbow Cake</h3>
           <p class="price" data-price="900">
@@ -855,7 +856,7 @@
 
       <!-- Rasmalai Cake 1 KG -->
       <div class="product" data-category="one-kg">
-        <img src="https://github.com/11-11-Websites/Reveuse-Treats/blob/main/images/Menu/Cakes/Rasmalai.jpg?raw=true" alt="1 KG Rasmalai Cake">
+        <img loading="lazy" src="https://github.com/11-11-Websites/Reveuse-Treats/blob/main/images/Menu/Cakes/Rasmalai.jpg?raw=true" alt="1 KG Rasmalai Cake">
         <div class="product-info">
           <h3 class="item-name">1 KG Rasmalai Cake</h3>
           <p class="price" data-price="900">₹900</p>
@@ -864,7 +865,7 @@
       </div>
 
       <div class="product" data-category="brownies">
-        <img src="https://github.com/11-11-Websites/Reveuse-Treats/blob/main/images/Menu/Brownies/Brownie.jpg?raw=true" alt="Brownie">
+        <img loading="lazy" src="https://github.com/11-11-Websites/Reveuse-Treats/blob/main/images/Menu/Brownies/Brownie.jpg?raw=true" alt="Brownie">
         <div class="product-info">
           <h3 class="item-name">Brownie</h3>
           <p class="price" data-price="800">
